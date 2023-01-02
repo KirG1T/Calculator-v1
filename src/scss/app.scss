@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import './libs/normalize';
+@import './function/pxToRem';
+
+:root {
+    font-size: 16px;
+
+    @media (max-width: 1024px) {
+        font-size: 13px;
+    }
+
+    @media (max-width: 1023px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 540px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 414px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 393px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 280px) {
+        font-size: 11px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #b4b4b4;
+}
+
+.calculator {
+    width: 100%;
+    max-height: pxToRem(724px);
+    max-width: pxToRem(420px);
+    margin: calc((100vh - pxToRem(724px)) / 2) auto 0 auto;
+    border-radius: pxToRem(20px);
+    box-shadow: 8px 9px 10px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 414px) {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        max-height: 100vh;
+    }
+
+    @media (max-width: 375px) {
+        max-width: 100vw;
+    }
+}

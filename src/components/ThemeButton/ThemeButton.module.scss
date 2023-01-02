@@ -1,0 +1,124 @@
+@import '../../scss/function/pxToRem';
+
+.wrapper {
+    display: flex;
+    width: pxToRem(88px);
+    height: pxToRem(38px);
+    border-radius: pxToRem(12px);
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    .lightThemeBtn {
+        position: relative;
+        width: 50%;
+        border-left: 1px solid rgb(89, 89, 89);
+        border-bottom: 1px solid rgb(89, 89, 89);
+        border-top: 1px solid rgb(89, 89, 89);
+        border-radius: 12px 0 0 12px;
+
+        svg {
+            position: absolute;
+            width: 67%;
+            left: pxToRem(8px);
+            top: pxToRem(-7px);
+
+            @media (max-width: 1024px) {
+                top: pxToRem(-13px);
+            }
+
+            @media (max-width: 1023px) {
+                top: pxToRem(-7px);
+            }
+
+            @media (max-width: 375px) {
+                top: pxToRem(-10px);
+            }
+
+            @media (max-width: 280px) {
+                top: pxToRem(-17px);
+            }
+
+            path {
+                stroke: rgb(158, 158, 158);
+            }
+
+            @media (pointer: fine) {
+                &:hover {
+                    path {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .darkThemeBtn {
+        position: relative;
+        width: 50%;
+        border-right: 1px solid rgb(89, 89, 89);
+        border-bottom: 1px solid rgb(89, 89, 89);
+        border-top: 1px solid rgb(89, 89, 89);
+        border-radius: 0 12px 12px 0;
+
+        svg {
+            position: absolute;
+            width: 50%;
+            left: pxToRem(10px);
+            top: pxToRem(8px);
+
+            path {
+                stroke: rgb(158, 158, 158);
+            }
+
+            @media (pointer: fine) {
+                &:hover {
+                    path {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .active {
+        background-color: #000;
+        border: none;
+
+        svg {
+            path {
+                stroke: #fff;
+            }
+        }
+    }
+}
+
+/*Light theme settings*/
+.lightTheme {
+    .lightThemeBtn {
+        border-left: 1px solid #eaf0f4;
+        border-bottom: 1px solid #eaf0f4;
+        border-top: 1px solid #eaf0f4;
+        svg {
+            path {
+                stroke: rgb(158, 158, 158);
+            }
+        }
+    }
+
+    .darkThemeBtn {
+        border-right: 1px solid #eaf0f4;
+        border-bottom: 1px solid #eaf0f4;
+        border-top: 1px solid #eaf0f4;
+    }
+
+    .active {
+        background-color: #3d3d3d;
+        border: none;
+
+        svg {
+            path {
+                stroke: #fff;
+            }
+        }
+    }
+}

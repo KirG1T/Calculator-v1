@@ -1,0 +1,66 @@
+@import '../../scss/function/pxToRem';
+
+/*Dark(default) theme settings*/
+.wrapper {
+    max-height: 100%;
+    background-color: #262626;
+    color: #fff;
+    border-radius: pxToRem(20px) pxToRem(20px) 0 0;
+    padding: pxToRem(35px);
+    box-shadow: inset 0px 0px 72px 14px #343434;
+
+    @media (max-width: 414px) {
+        height: 45vh;
+        border-radius: 0;
+        box-shadow: none;
+        padding-top: pxToRem(40px);
+    }
+
+    @media (max-width: 375px) {
+        height: 40vh;
+    }
+
+    @media (max-width: 360px) {
+        height: 45vh;
+    }
+
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        span {
+            display: block;
+            color: inherit;
+        }
+
+        .result {
+            font-size: pxToRem(53px);
+            line-height: pxToRem(140px);
+            padding-top: pxToRem(7px);
+
+            @media (max-width: 414px) {
+                padding-top: pxToRem(60px);
+            }
+
+            @media (max-width: 375px) {
+                padding-top: pxToRem(5px);
+            }
+
+            @media (max-width: 280px) {
+                padding-top: pxToRem(75px);
+            }
+        }
+
+        .calculating {
+            font-size: pxToRem(25px);
+        }
+    }
+}
+
+/*Light theme settings*/
+.lightTheme {
+    background-color: #c1cfd8;
+    box-shadow: inset 0px 0px 72px 14px #e5e5e5;
+    color: #3d3d3d;
+}

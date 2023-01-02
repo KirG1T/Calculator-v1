@@ -1,0 +1,409 @@
+@import '../../scss/function/pxToRem';
+
+/*Dark(default) theme settings*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    background: linear-gradient(50deg, rgba(45, 45, 49, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    padding: pxToRem(20px) pxToRem(30px);
+    border-radius: 0 0 pxToRem(20px) pxToRem(20px);
+
+    @media (max-width: 414px) {
+        height: 55vh;
+        border-radius: 0;
+        box-shadow: none;
+        padding-top: pxToRem(34px);
+    }
+
+    @media (max-width: 375px) {
+        height: 60vh;
+        padding-top: pxToRem(22px);
+    }
+
+    @media (max-width: 360px) {
+        height: 55vh;
+        padding-top: pxToRem(25px);
+    }
+
+    @media (max-width: 280px) {
+        padding-top: pxToRem(40px);
+    }
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: pxToRem(37px);
+        row-gap: pxToRem(24px);
+
+        @media (max-width: 414px) {
+            row-gap: pxToRem(34px);
+            padding-bottom: pxToRem(3px);
+        }
+
+        @media (max-width: 375px) {
+            row-gap: pxToRem(30px);
+            column-gap: pxToRem(42px);
+        }
+
+        @media (max-width: 360px) {
+            row-gap: pxToRem(30px);
+            column-gap: pxToRem(37px);
+        }
+
+        @media (max-width: 280px) {
+            row-gap: pxToRem(35px);
+        }
+
+        .symbolButton {
+            display: flex;
+            max-width: pxToRem(60px);
+            height: pxToRem(60px);
+            background-color: #72727f;
+            color: #fff;
+            border-radius: pxToRem(12px);
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #a5a5b7 radial-gradient(circle, transparent 1%, #a5a5b7 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+
+            span {
+                display: block;
+                color: inherit;
+                font-size: pxToRem(27px);
+            }
+        }
+
+        .divisionBtn {
+            span {
+                font-size: pxToRem(33px);
+            }
+        }
+
+        .multBtn {
+            span {
+                scale: 1.2;
+            }
+        }
+
+        .minusBtn {
+            span {
+                font-size: pxToRem(33px);
+            }
+        }
+
+        .plusBtn {
+            span {
+                scale: 1.2;
+            }
+        }
+
+        .minusBtn {
+            span {
+                transform: scaleX(2) scaleY(1.2);
+            }
+        }
+
+        .numberButton {
+            display: flex;
+            max-width: pxToRem(60px);
+            height: pxToRem(60px);
+            background-color: #41434a;
+            color: #fff;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #72727f radial-gradient(circle, transparent 1%, #72727f 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+
+            span {
+                display: block;
+                color: inherit;
+                font-size: pxToRem(25px);
+            }
+        }
+    }
+
+    .otherButtons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: pxToRem(24px);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+        @media (max-width: 375px) {
+            margin-top: pxToRem(20px);
+        }
+
+        @media (max-width: 280px) {
+            margin-top: pxToRem(35px);
+        }
+
+        .zeroButton {
+            display: flex;
+            background-color: #474752;
+            color: #fff;
+            width: 100%;
+            max-width: pxToRem(157px);
+            border-radius: pxToRem(30px);
+            justify-content: flex-start;
+            align-items: center;
+            padding: pxToRem(15px) 0 pxToRem(15px) pxToRem(24px);
+            cursor: pointer;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #72727f radial-gradient(circle, transparent 1%, #72727f 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+
+            span {
+                color: inherit;
+                font-size: pxToRem(25px);
+            }
+        }
+
+        .commaButton {
+            display: flex;
+            background-color: #474752;
+            color: #fff;
+            width: 100%;
+            max-width: pxToRem(90px);
+            border-radius: pxToRem(30px);
+            padding-left: pxToRem(35px);
+            align-items: center;
+            cursor: pointer;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #72727f radial-gradient(circle, transparent 1%, #72727f 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+
+            span {
+                color: inherit;
+                font-size: pxToRem(25px);
+            }
+        }
+
+        .equalButton {
+            display: flex;
+            background-color: inherit;
+            color: #fff;
+            border-radius: pxToRem(12px);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: pxToRem(58px);
+            cursor: pointer;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #72727f radial-gradient(circle, transparent 1%, #72727f 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+
+                @media (max-width: 1024px) {
+                    background-color: #72727f;
+                }
+            }
+            // /* ==================================== */
+
+            span {
+                color: inherit;
+                scale: 2;
+                transform: scaleX(1.7);
+            }
+        }
+    }
+}
+
+/*Light theme settings*/
+.lightTheme {
+    background: linear-gradient(50deg, rgba(211, 218, 226) 0%, rgba(229, 230, 235) 100%);
+
+    .gridContainer {
+        .symbolButton {
+            background-color: #edf1f4;
+            color: #3d3d3d;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #bebed4 radial-gradient(circle, transparent 1%, #bebed4 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+        }
+
+        .numberButton {
+            background-color: #fff;
+            color: #3d3d3d;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #bebed4 radial-gradient(circle, transparent 1%, #bebed4 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+        }
+    }
+
+    .otherButtons {
+        .zeroButton {
+            background-color: #edf1f4;
+            color: #3d3d3d;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #bebed4 radial-gradient(circle, transparent 1%, #bebed4 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+        }
+        .commaButton {
+            background-color: #edf1f4;
+            color: #3d3d3d;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #bebed4 radial-gradient(circle, transparent 1%, #bebed4 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+        }
+        .equalButton {
+            color: #3d3d3d;
+
+            /* Ripple effect */
+            background-position: center;
+            transition: background 0.8s;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background: #bebed4 radial-gradient(circle, transparent 1%, #bebed4 1%)
+                        center/15000%;
+                }
+            }
+
+            &:active {
+                background-color: transparent;
+                background-size: 100%;
+                transition: background 0s;
+            }
+            /* ==================================== */
+        }
+    }
+}
