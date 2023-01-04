@@ -8,7 +8,7 @@ const ThemeButton = () => {
     const dispatch = useDispatch();
 
     const changeThemeClick = (event) => {
-        if (event.currentTarget.className.includes('ThemeButton_lightThemeBtn__SYePK')) {
+        if (event.currentTarget.className.includes('ThemeButton_lightThemeBtn__p5HSE')) {
             dispatch(changeTheme(false));
         } else {
             dispatch(changeTheme(true));
@@ -17,10 +17,7 @@ const ThemeButton = () => {
 
     return (
         <div className={`${styles.wrapper} ${!darkTheme ? styles.lightTheme : ''}`}>
-            <div
-                className={`${styles.lightThemeBtn} ${!darkTheme ? styles.active : ''}`}
-                onClick={changeThemeClick}
-            >
+            <div className={`${styles.lightThemeBtn} ${!darkTheme ? styles.active : ''}`} onClick={changeThemeClick}>
                 <svg
                     id='sun'
                     fill='#000000'
@@ -39,10 +36,7 @@ const ThemeButton = () => {
                     />
                 </svg>
             </div>
-            <div
-                className={`${styles.darkThemeBtn} ${darkTheme ? styles.active : ''}`}
-                onClick={changeThemeClick}
-            >
+            <div className={`${styles.darkThemeBtn} ${darkTheme ? styles.active : ''}`} onClick={changeThemeClick}>
                 <svg
                     id='moon'
                     xmlns='http://www.w3.org/2000/svg'
